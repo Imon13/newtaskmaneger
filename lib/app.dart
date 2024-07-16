@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:maneger/ui/sceens/splash_sceen.dart';
+import 'package:maneger/ui/sceens/auth/splash_sceen.dart';
 import 'package:maneger/ui/utility/app_colors.dart';
 
 class TaskManeger extends StatelessWidget {

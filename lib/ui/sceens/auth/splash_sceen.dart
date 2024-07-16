@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart.';
 import 'package:flutter_svg/svg.dart';
-import 'package:maneger/ui/sceens/sing_in_sceen.dart';
+import 'package:maneger/ui/sceens/auth/sing_in_sceen.dart';
 import 'package:maneger/ui/weidgets/background_weidgets.dart';
 
 
