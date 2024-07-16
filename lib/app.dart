@@ -32,11 +32,12 @@ class TaskManeger extends StatelessWidget {
           fontWeight: FontWeight.bold,
           color: Colors.black
         ),
-        // titleMedium: TextStyle(
-        //   fontWeight: FontWeight.w400,
-        //   fontSize: 16,
-        //   color: Colors.green
-        // )
+        titleSmall: TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: 16,
+          color: Colors.grey,
+          letterSpacing: 0.4
+        )
       ),
 
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -50,6 +51,15 @@ class TaskManeger extends StatelessWidget {
             borderRadius: BorderRadius.circular(8)
           )
 
+        )
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: Colors.grey,
+          textStyle: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w400
+          )
         )
       )
     );

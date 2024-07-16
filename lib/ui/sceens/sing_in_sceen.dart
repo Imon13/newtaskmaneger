@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart.';
+import 'package:maneger/ui/sceens/email_varification_sceen.dart';
+import 'package:maneger/ui/sceens/sing_up_sceen.dart';
 import 'package:maneger/ui/utility/app_colors.dart';
 import 'package:maneger/ui/weidgets/background_weidgets.dart';
 
@@ -13,6 +15,8 @@ class SingInSceen extends StatefulWidget {
 class _SingInSceenState extends State<SingInSceen> {
   final TextEditingController _emailTEcontroller = TextEditingController();
   final TextEditingController _passwordTEcontroller = TextEditingController();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +33,7 @@ class _SingInSceenState extends State<SingInSceen> {
               SizedBox(height: 10,),
               TextFormField(
                 controller: _emailTEcontroller,
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   hintText: 'Email'
                 ),
@@ -50,7 +55,9 @@ class _SingInSceenState extends State<SingInSceen> {
               Center(
                 child: Column(
                   children: [
-                    TextButton(onPressed: (){},
+                    TextButton(onPressed: (){
+                      _onTapForgotPassword();
+                    },
                         child: Text('Forget Password')),
                     RichText(text:TextSpan(
                       style: TextStyle(
@@ -67,7 +74,8 @@ class _SingInSceenState extends State<SingInSceen> {
                           ),
                           text: "Sing Up",
                           recognizer: TapGestureRecognizer()..onTap=(){
-                            print('hello');
+                            _onTapSingUpButton();
+
                           }
                         )
                       ]
@@ -81,6 +89,12 @@ class _SingInSceenState extends State<SingInSceen> {
         ),
       ))),
     );
+  }
+  void _onTapSingUpButton() {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>SingUpSceen()));
+  }
+  void _onTapForgotPassword() {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailVarificationSceen()));
   }
   @override
   void dispose() {
