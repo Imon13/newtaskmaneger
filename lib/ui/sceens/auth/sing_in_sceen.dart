@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart.';
 import 'package:maneger/ui/sceens/auth/email_varification_sceen.dart';
 import 'package:maneger/ui/sceens/auth/sing_up_sceen.dart';
+import 'package:maneger/ui/sceens/main_bottom_nav_sceen.dart';
 import 'package:maneger/ui/utility/app_colors.dart';
 import 'package:maneger/ui/weidgets/background_weidgets.dart';
 
@@ -48,7 +49,9 @@ class _SingInSceenState extends State<SingInSceen> {
         
               ),
               SizedBox(height: 15,),
-              ElevatedButton(onPressed: (){},
+              ElevatedButton(onPressed: (){
+                _onTapNextButton();
+              },
                   child: Icon(Icons.arrow_circle_right_outlined)
               ),
             const SizedBox(height: 30,),
@@ -95,6 +98,9 @@ class _SingInSceenState extends State<SingInSceen> {
   }
   void _onTapForgotPassword() {
     Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailVarificationSceen()));
+  }
+  void _onTapNextButton() {
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainBottomNavSceen()));
   }
   @override
   void dispose() {
