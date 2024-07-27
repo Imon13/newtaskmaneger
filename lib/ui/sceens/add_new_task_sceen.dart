@@ -16,7 +16,7 @@ class _AddNewTaskSceenState extends State<AddNewTaskSceen> {
  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: profileAppber(),
+      appBar: profileAppber(context),
       body: BackgroundWeidgets(
           child:Padding(
             padding: const EdgeInsets.all(16.0),

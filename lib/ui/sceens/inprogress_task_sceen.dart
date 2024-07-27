@@ -14,7 +14,7 @@ class _InprogressTaskSceenState extends State<InprogressTaskSceen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: profileAppber(),
+      appBar: profileAppber(context),
       body: ListView.builder(
           itemCount: 5,
           itemBuilder: (context,index){

@@ -14,7 +14,7 @@ class _CompletedTaskSceenState extends State<CompletedTaskSceen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: profileAppber(),
+        appBar: profileAppber(context),
         body: ListView.builder(
             itemCount: 5,
             itemBuilder: (context,index){
