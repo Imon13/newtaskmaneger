@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart.';
 
+import '../weidgets/profile_appber.dart';
+import '../weidgets/task_item.dart';
+
 class CencleTaskSceen extends StatefulWidget {
   const CencleTaskSceen({super.key});
 
@@ -10,6 +13,12 @@ class CencleTaskSceen extends StatefulWidget {
 class _CencleTaskSceenState extends State<CencleTaskSceen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: profileAppber(),
+        body: ListView.builder(
+            itemCount: 5,
+            itemBuilder: (context,index){
+              return TaskItem();
+            }));
   }
 }

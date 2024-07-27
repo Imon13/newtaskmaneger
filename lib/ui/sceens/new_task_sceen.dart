@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart.';
+import 'package:maneger/ui/sceens/add_new_task_sceen.dart';
 
 import '../weidgets/profile_appber.dart';
+import '../weidgets/task_item.dart';
 import '../weidgets/task_summary_card.dart';
 
 class NewTaskSceen extends StatefulWidget {
@@ -16,14 +17,28 @@ class _NewTaskSceenState extends State<NewTaskSceen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: profileAppber(),
-      body: Column(
-        children: [
-          buildSummerySection()
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(top: 8,left: 8,right: 8),
+        child: Column(
+          children: [
+            buildSummerySection(),
+            Expanded(child: ListView.builder(
+              itemCount: 5,
+                itemBuilder: (context,index){
+              return TaskItem();
+            }))
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: _onTapAddButton,
+        child: Icon(Icons.add),
       ),
     );
   }
+ void _onTapAddButton(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>AddNewTaskSceen()));
 
+ }
  Widget  buildSummerySection() {
     return SingleChildScrollView(
           child: Row(
@@ -48,5 +63,6 @@ class _NewTaskSceenState extends State<NewTaskSceen> {
         );
   }
 }
+
 
 
