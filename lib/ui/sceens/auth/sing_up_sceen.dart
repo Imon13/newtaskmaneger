@@ -132,7 +132,9 @@ class _SingInSceenState extends State<SingUpSceen> {
                 SizedBox(height: 15,),
                 Visibility(
                   visible: _registrationInProcess == false,
-                  replacement: CircularProgressIndicator(),
+                  replacement: Center(
+                      child: CircularProgressIndicator()
+                  ),
                   child: ElevatedButton(onPressed: (){
                     if(_formKey.currentState!.validate()){
                       _register();
